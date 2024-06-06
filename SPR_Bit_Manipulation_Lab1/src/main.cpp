@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Console.h"
 #include <bitset>
 #include <string>
+#include <cmath>
 
 unsigned int bitField = 19;				// Initial int
 unsigned int number = 1;				// Used to select bit using leftShift operator
@@ -87,4 +87,21 @@ int main(){
 			std::cout << "\n Please enter a valid option";
 			break;
 	}
+
+	// Debugging only
+	std::cout << "----This is just debugging----\n";
+	std::cout << "******************************\n\n";
+	
+	std::string num_str = "";
+	
+	for(int i = 32; i >= 0; i--){
+		if(bitField < pow(2,i)){
+			num_str += "0";
+		}
+		else{
+			num_str += "1";
+			bitField -= pow(2,i);
+		}
+	}
+	std::cout << "\n\nBinary: " << num_str << std::endl;
 }
