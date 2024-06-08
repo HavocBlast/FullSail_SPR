@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(BitManipulation)
+project(Pointers)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -11,10 +11,10 @@ file(GLOB_RECURSE sources
 # Add precompiler definitions like that:
 add_definitions(-DSOME_DEFINITION)
 
-add_executable(BitManipulation ${sources})
+add_executable(Pointers ${sources})
 
 # Add more include directories if needed
-target_include_directories(BitManipulation PUBLIC "{CMAKE_SOURCE_DIR}/include")
+target_include_directories(Pointers PUBLIC "{CMAKE_SOURCE_DIR}/include")
 
 # If you have precompiled headers you can add them like this
 # target_precompiled_headers(warehouse PRIVATE "${CMAKE_SOURCE_DIR}/src/pch.h")
